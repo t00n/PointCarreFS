@@ -141,4 +141,4 @@ if __name__ == "__main__":
         exit(1)
 
     fs = FileSystem(PointCarre.cached_session())
-    fuse = FUSE(fs, argv[1], foreground=True)
+    fuse = FUSE(fs, argv[1], foreground=False)

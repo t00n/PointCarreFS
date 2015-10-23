@@ -1,0 +1,16 @@
+# The pointcarrefs service
+
+[Unit]
+Description=Mount pointcarre in your filesystem
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=toon
+WorkingDirectory=/home/toon/.pointcarrefs
+ExecStart=/usr/bin/pointcarrefs /home/toon/PointCarre/
+ExecStop=/usr/bin/kill $MAINPID
+ExecKill=/usr/bin/kill -9 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
