@@ -1,3 +1,5 @@
+#!/usr/bin/python2
+
 import errno
 import stat
 import os
